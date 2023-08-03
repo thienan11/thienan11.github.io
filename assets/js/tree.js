@@ -261,8 +261,8 @@ class Tree {
 	setupThemeDetection() {
 		if (window.matchMedia) {
 			const mq = window.matchMedia("(prefers-color-scheme: dark)");
-			this.detectTheme(mq);
-			mq.addListener(this.detectTheme.bind(this));
+			// this.detectTheme(mq);
+			// mq.addListener(this.detectTheme.bind(this));
 		}
 	}
 }
