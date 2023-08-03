@@ -111,7 +111,7 @@ input, select, textarea {
 		-ms-transition: color .2s ease-in-out;
 		transition: color .2s ease-in-out;
 		color: #43B3E0;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 		a:hover {
@@ -2102,6 +2102,11 @@ input, select, textarea {
 					border-top: solid 0.6em #282828;
 				}
 
+				/* nav li.active{
+					background-color: crimson;
+					transition: 0.3 ease background-color;
+				} */
+
 /* Articles */
 
 	body > article {
@@ -2129,7 +2134,7 @@ input, select, textarea {
 		}
 
 		#about p {
-			font-size: 1.5em;
+			font-size: 1em;
 			line-height: 1.75em;
 		}
 
