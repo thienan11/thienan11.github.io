@@ -1998,6 +1998,7 @@ input, select, textarea {
 		.wrapper.style1 {
 			/* background-image: url("/images/blurvintage.png"); */
 			/* background-size: 1950px; */
+			background-image: none;
 			background-color: #cddeee;
 		}
 
