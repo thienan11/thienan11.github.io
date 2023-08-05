@@ -2202,6 +2202,10 @@ input, select, textarea {
 				margin: 0 0 4em 0;
 			}
 
+			canvas {
+				margin-top: -100px;
+			}
+
 		/* Wrappers */
 
 			.wrapper {
@@ -2225,7 +2229,6 @@ input, select, textarea {
 					height: 24em;
 					margin: 0;
 				}
-
 	}
 
 /* Medium */
@@ -2537,9 +2540,12 @@ input, select, textarea {
 }
 
 canvas {
-	display: block;
+	display: flex;
 	margin: auto;
 	object-fit: contain;
 	max-width: 50vw;
 	max-height: 50vh;
+	/* align-items: center;
+	justify-content: center; */
 }
+

@@ -15,10 +15,10 @@ class Tree {
 		this.decaying = false;
 		this.floorY = 685;
 		this.fruit = [];
-		this.gravity = 0.098;
+		this.gravity = 0.03;
 		this.loopDelay = 500;
 		this.loopEnd = Utils.dateValue;
-		this.maxGenerations = 10;
+		this.maxGenerations = 8;
 
 		if (this.C) this.init();
 	}
@@ -90,22 +90,59 @@ class Tree {
 			});
 		}
 
-		// branches
-		branches.forEach(b => {
-			c.lineWidth = b.diameter;
-			c.beginPath();
-			c.moveTo(b.x1,b.y1);
-			c.lineTo(
-				b.x1 + (b.x2 - b.x1) * b.progress,
-				b.y1 + (b.y2 - b.y1) * b.progress
-			);
-			c.stroke();
-			c.closePath();
-		});
+		this.branches.forEach(b => {
+      const branchX = b.x1 + (b.x2 - b.x1) * b.progress;
+      const branchY = b.y1 + (b.y2 - b.y1) * b.progress;
+
+      c.lineWidth = b.diameter;
+      c.beginPath();
+      c.moveTo(b.x1, b.y1);
+      c.lineTo(branchX, branchY);
+      c.stroke();
+      c.closePath();
+
+      // Draw leaves at the tips of branches
+      if (b.progress === 1 && b.generation > 1) {
+				// if (Math.random() < 0.5) { // Random chance to draw petals
+				// 	const petalCount = 5; // Set a fixed number of petals
+				// 	const petalLength = 10;
+	
+				// 	const petalColor = "#ff8abf"; // Sakura petal color
+	
+				// 	for (let i = 0; i < petalCount; i++) {
+				// 		const angle = i * (360 / petalCount);
+				// 		const petalX = branchX + Utils.endPointX(angle, petalLength);
+				// 		const petalY = branchY - Utils.endPointY(angle, petalLength);
+	
+				// 		c.fillStyle = petalColor; // Set the petal color
+				// 		c.beginPath();
+				// 		c.arc(petalX, petalY, 3, 0, 2 * Math.PI);
+				// 		c.fill();
+				// 	}
+				// }
+					const petalCount = 5; // Set a fixed number of petals
+					const petalLength = 5;
+	
+					const petalColor = "#ff8abf"; // Sakura petal color
+	
+					for (let i = 0; i < petalCount; i++) {
+						const angle = i * (360 / petalCount);
+						const petalX = branchX + Utils.endPointX(angle, petalLength);
+						const petalY = branchY - Utils.endPointY(angle, petalLength);
+	
+						c.fillStyle = petalColor; // Set the petal color
+						c.beginPath();
+						c.arc(petalX, petalY, 3, 0, 2 * Math.PI);
+						c.fill();
+						c.closePath();
+					}
+			}
+    });
 
 		// fruit
 		fruit.forEach(f => {
 			c.globalAlpha = f.decayTime	< f.decayFrames ? f.decayTime / f.decayFrames : 1;
+			c.fillStyle = "#ff8abf"
 			c.beginPath();
 			c.arc(f.x,f.y,f.r * f.progress,0,2 * Math.PI);
 			c.fill();
@@ -232,7 +269,6 @@ class Tree {
 	}
 	init() {
 		this.setupCanvas();
-		this.setupThemeDetection();
 		this.run();
 	}
 	run() {
@@ -258,13 +294,7 @@ class Tree {
 		c.lineCap = "round";
 		c.lineJoin = "round";
 	}
-	setupThemeDetection() {
-		if (window.matchMedia) {
-			const mq = window.matchMedia("(prefers-color-scheme: dark)");
-			// this.detectTheme(mq);
-			// mq.addListener(this.detectTheme.bind(this));
-		}
-	}
+
 }
 
 class Utils {
