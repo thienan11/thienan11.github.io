@@ -1996,26 +1996,28 @@ input, select, textarea {
 	}
 	
 		.wrapper.style1 {
-			/* background-image: url("/images/blurvintage.png"); */
-			/* background-size: 1950px; */
-			background-image: none;
-			background-color: #cddeee;
-			/* background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
-  	background-size:cover;
-        -webkit-animation: slidein 100s;
-        animation: slidein 100s;
+			/* background-image: url("/images/flow.jpg"); */
+			background-image: url("/images/cloud.jpeg");
+			background-position: center;
+			
+			/* background-image: none; */
+			/* background-color:#6497b1; */
+			/* background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg'); */
+  		background-size:cover;
+			/* -webkit-animation: slidein 100s;
+			animation: slidein 100s;
 
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
 
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
 
-        -webkit-animation-direction: alternate;
-        animation-direction: alternate;  */
+			-webkit-animation-direction: alternate;
+			animation-direction: alternate;  */
 		}
 
-		@-webkit-keyframes slidein {
+		/* @-webkit-keyframes slidein {
 			from {background-position: top; background-size:3000px; }
 			to {background-position: -100px 0px;background-size:2750px;}
 			}
@@ -2024,7 +2026,7 @@ input, select, textarea {
 			from {background-position: top;background-size:3000px; }
 			to {background-position: -100px 0px;background-size:2750px;}
 			
-		}
+		} */
 
 		.wrapper.style2 {
 			background-color: #fafafa;
@@ -2137,9 +2139,14 @@ input, select, textarea {
 		margin-bottom: 0;
 	}
 
-	#about, #top {
+	#about {
 		padding: 10em 0 10em 0;
 		text-align: left;
+	}
+
+	#top {
+		padding: 10em 0 10em 0;
+		text-align: center;
 	}
 
 		#about .image {
@@ -2480,7 +2487,8 @@ input, select, textarea {
 
 	}
 
-	@keyframes slideInFromLeft {
+/* Additional animations */
+@keyframes slideInFromLeft {
     0% {
         opacity: 0;
         transform: translateX(-50px);
@@ -2577,3 +2585,15 @@ canvas {
 	justify-content: center; */
 }
 
+#breathe{
+	animation: breathe 4.5s ease-in-out infinite;
+	/* animation-duration: 4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite; */
+}
+
+@keyframes breathe {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.07); }
+	100% { transform: scale(1); }
+}
