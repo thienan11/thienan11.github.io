@@ -2038,6 +2038,10 @@ input, select, textarea {
 			text-shadow: 1px 1px 0px #fff;
 		}
 
+		.wrapper.style3 ul {
+			list-style: none;
+		}
+
 		.wrapper.style4 {
 			background-color: #303030;
 			color: #999;
