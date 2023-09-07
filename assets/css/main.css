@@ -2493,22 +2493,35 @@ input, select, textarea {
 
 /* Additional animations */
 @keyframes slideInFromLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+	0% {
+		opacity: 0;
+		transform: translateX(-60px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
-.fade {
-    animation: slideInFromLeft 1s ease;
+@keyframes slideInFromRight {
+	0% {
+		opacity: 0;
+		transform: translateX(60px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
-.fade2 {
-	animation: slideInFromLeft 2s ease;
+.fadeL {
+	opacity: 0;
+	animation: slideInFromLeft 2s ease forwards;
+}
+
+.fadeR {
+	opacity: 0;
+	animation: slideInFromRight 3s ease forwards;
 }
 
 /*Type Writing animation*/
