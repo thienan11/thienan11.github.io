@@ -1997,11 +1997,11 @@ input, select, textarea {
 	
 		.wrapper.style1 {
 			/* background-image: url("/images/flow.jpg"); */
-			background-image: url("/images/cloud.jpeg");
+			/* background-image: url("/images/cloud.jpeg"); */
 			background-position: center;
 			
-			/* background-image: none; */
-			/* background-color:#6497b1; */
+			background-image: none;
+			background-color:#8baab9;
 			/* background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg'); */
   		background-size:cover;
 			/* -webkit-animation: slidein 100s;
@@ -2027,7 +2027,15 @@ input, select, textarea {
 			to {background-position: -100px 0px;background-size:2750px;}
 			
 		} */
-
+		.wrapper.style1 header {
+			/* display: flex; */
+			margin-bottom: 0px;
+		}
+		.wrapper.style1 img {
+			width: 147px;
+			height: 123px;
+		}
+		
 		.wrapper.style2 {
 			background-color: #fafafa;
 			text-shadow: 1px 1px 0px #fff;
@@ -2149,7 +2157,7 @@ input, select, textarea {
 	}
 
 	#top {
-		padding: 10em 0 10em 0;
+		padding: 8em 0 8em 0;
 		text-align: center;
 	}
 
@@ -2613,4 +2621,41 @@ canvas {
 	0% { transform: scale(1); }
 	50% { transform: scale(1.07); }
 	100% { transform: scale(1); }
+}
+
+div.typing-container {
+  display: grid;
+  place-items: center;
+	/* height: 25px; */
+}
+
+.typing-demo {
+  animation: typing 2.5s steps(22) forwards, blink 0.5s step-end infinite alternate 2.5s;
+  animation-delay: 1.5s; /* Add a delay of 2 seconds */
+	white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid; /* Adjust cursor thickness */
+  font-family: monospace;
+  /* font-size: 3em;  */
+  line-height: 1.2; /* Adjust line height to fit the text */
+  visibility: hidden; /* Initially hide the text */
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  20% {
+    visibility: visible; /* Show the text */
+  }
+  100% {
+    width: 16.5ch; /* Set it to the final width */
+    visibility: visible; /* Ensure the text remains visible */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
