@@ -214,9 +214,9 @@ input, select, textarea {
 			margin: 0;
 		}
 
-	footer {
+	/* footer {
 		margin: 3em 0 0 0;
-	}
+	} */
 
 		footer > p {
 			font-size: 1.25em;
@@ -2696,4 +2696,9 @@ div.typing-container {
   justify-content: center;
   text-decoration: none;
   color: inherit; /* Or specify a color */
+}
+
+#contact.wrapper.style4 {
+	height: auto; /* Allows the section to grow with the content on smaller screens */
+	padding: 10px 5px; /* Adjust padding for smaller screens */
 }
