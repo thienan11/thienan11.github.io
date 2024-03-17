@@ -2536,26 +2536,6 @@ input, select, textarea {
 	animation: slideInFromRight 3s ease forwards;
 }
 
-/*Type Writing animation*/
-/* @keyframes typing {
-	from {
-			width: 0;
-	}
-	to {
-			width: 100%;
-	}
-} */
-
-/* Apply the typing animation to the header */
-/* .typewriter {
-	color:#181818;
-	overflow: hidden;
-	white-space: nowrap;
-	border-right: 0.08em solid rgba(255, 255, 255, 0.75);
-	animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-	line-height: 1.8;
-} */
-
 /* Resume button */
 .resume {
   align-items: center;
@@ -2616,9 +2596,6 @@ canvas {
 
 #breathe{
 	animation: breathe 4.5s ease-in-out infinite;
-	/* animation-duration: 4s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite; */
 }
 
 @keyframes breathe {
@@ -2635,7 +2612,7 @@ div.typing-container {
 
 .typing-demo {
   animation: typing 2.5s steps(22) forwards, blink 0.5s step-end infinite alternate 2.5s;
-  animation-delay: 1.5s; /* Add a delay of 2 seconds */
+  animation-delay: 0.5s;
 	white-space: nowrap;
   overflow: hidden;
   border-right: 5px solid; /* Adjust cursor thickness */
@@ -2701,4 +2678,15 @@ div.typing-container {
 #contact.wrapper.style4 {
 	height: auto; /* Allows the section to grow with the content on smaller screens */
 	padding: 10px 5px; /* Adjust padding for smaller screens */
+}
+
+.project-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 20px; /* Adjust based on your layout */
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
