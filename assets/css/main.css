@@ -2289,6 +2289,10 @@ input, select, textarea {
 					margin: 0 auto 2em auto;
 				}
 
+			.resume-contact-wrapper {
+				justify-content: center;
+			}
+
 	}
 
 /* Small */
@@ -2658,4 +2662,38 @@ div.typing-container {
   50% {
     border-color: transparent;
   }
+}
+
+.project-image {
+  width: 100%; /* or a specific px value, e.g., 300px */
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover; /* Cover the container without distorting the image */
+	
+  display: block; /* Remove any extra space below the image */
+}
+
+.resume-contact-wrapper {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Adjust the space between the resume button and contact icons */
+}
+
+.contact-icons {
+  list-style: none;
+  display: flex;
+  gap: 10px; /* Adjust the space between each icon */
+  padding: 0;
+  margin: 0;
+}
+
+.contact-icons li {
+  display: flex;
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit; /* Or specify a color */
 }
