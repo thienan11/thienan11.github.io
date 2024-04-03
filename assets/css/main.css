@@ -2690,3 +2690,13 @@ div.typing-container {
   transform: translateY(-10px);
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
+
+.github-link {
+  display: inline-block;
+  margin-right: 10px;
+  color: #333; /* or any color you prefer */
+  text-decoration: none;
+}
+.github-link .icon {
+  margin-right: 5px;
+}
