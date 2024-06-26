@@ -13,6 +13,10 @@ const ProjectDetail = () => {
   // }
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); // Empty dependency array means this runs only once on mount
+
+  useEffect(() => {
     if (!project) {
       navigate('/'); // Redirect to the home page
     }

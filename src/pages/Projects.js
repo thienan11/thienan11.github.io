@@ -1,5 +1,6 @@
 import ProjectsData from '../data/ProjectsData';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -8,6 +9,10 @@ const Projects = () => {
   const goToProjectDetails = (projectId) => {
     navigate(`/projects/${projectId}`);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="projects-page">

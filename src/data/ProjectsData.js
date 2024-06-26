@@ -38,7 +38,7 @@ const projectsData = [
   {
     projectId: "Binary-File-Sorter",
     title: "Binary File Sorter",
-    description: "A Java program that sorts binary files usingthe heap sort algorithm and the Proxy design pattern.",
+    description: "A Java program that sorts binary files using the heap sort algorithm and the Proxy design pattern.",
     techStack: ["Java", "JUnit"],
     imageUrl: "/images/heapsort.png",
     websiteUrl: "",
