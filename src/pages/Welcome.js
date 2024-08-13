@@ -8,7 +8,7 @@ const Welcome = () => {
       <h1><strong>About</strong></h1>
       <section className="profile-section">
         <div className="profile-container">
-          <img src="images/profile_pic.jpg" alt="Profile" className="profile-photo" />
+          <img loading="lazy" src="images/profile_pic.jpg" alt="Profile" className="profile-photo" />
           <div className="bio">
             <p>
               Hi, my name is Thien An Tran. I recently finished my undergrad at Cal Poly San Luis Obispo!
@@ -27,7 +27,7 @@ const Welcome = () => {
           </div>
         </div>
       </section>
-      <button onClick={() => window.open("docs/Thien An's Current Resume.pdf", '_blank')}>Resume</button>
+      <button onClick={() => window.open("https://drive.google.com/file/d/1VaovggDAmNLZGGPfFfIAqnSN5mqFk3CH/view?usp=sharing", '_blank')}>Resume</button>
       <section className="experience-section">
         <h2><strong>Experience</strong></h2>
         <div className="experience-list">

@@ -5,7 +5,7 @@ const projectsData = [
     description: "SLOStudySpots is an interactive web application designed to help students and residents of San Luis Obispo find the best study spots in the area.\n\nThis user-friendly platform provides users with detailed reviews, ratings, and photos of various locations, including cafes, libraries, and public spaces, making it easier to find the perfect place for study or work.",
     techStack: ["Lit", "Express", "MongoDB", "TypeScript", "Vite"],
     imageUrl: "/images/slostudyspots.png",
-    websiteUrl: "",
+    websiteUrl: "https://stingray-app-kn7he.ondigitalocean.app/app",
     githubUrl: "https://github.com/thienan11/SLOStudySpots"
   },
   {

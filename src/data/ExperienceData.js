@@ -1,7 +1,7 @@
 const experienceData = [
   {
     id: 1,
-    title: "Mobile Software Developer",
+    title: "Software Developer Intern",
     company: "Xperi Inc.",
     dates: "September 2023 - June 2024"
   },

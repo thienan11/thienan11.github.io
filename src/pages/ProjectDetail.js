@@ -46,9 +46,9 @@ const ProjectDetail = () => {
 
   return (
     <div className="project-detail-container">
-      <h1>{project.title}</h1>
       <button onClick={() => window.history.back()}>← Back</button>
-      <img src={project.imageUrl} alt={project.title} />
+      <h1>{project.title}</h1>
+      <img loading="lazy" src={project.imageUrl} alt={project.title} />
       {project.techStack && Array.isArray(project.techStack) && (
         <ul>
           {project.techStack.map((tech, index) => (

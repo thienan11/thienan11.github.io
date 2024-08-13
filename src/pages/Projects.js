@@ -20,7 +20,7 @@ const Projects = () => {
       <div className="projects-grid">
         {ProjectsData.map((project) => (
           <div className="project-card" key={project.id} onClick={() => goToProjectDetails(project.projectId)}>
-            <img src={project.imageUrl} alt={project.title} className="project-image" />
+            <img loading="lazy" src={project.imageUrl} alt={project.title} className="project-image" />
             <div className="project-info">
               <h2>{project.title}</h2>
               {project.techStack && Array.isArray(project.techStack) && (
