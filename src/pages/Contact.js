@@ -1,5 +1,6 @@
 import React from 'react';
 import Swal from 'sweetalert2';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const apiKey = process.env.REACT_APP_WEB3_FORMS_ACCESS_KEY;
@@ -48,43 +49,49 @@ const Contact = () => {
   };
 
   return (
-    <div className="contacts-page">
-      <h1>Contact Me</h1>
-      <p>
-        Please contact me directly at {" "}
-        <a className="underline" href="mailto:fxthienan@gmail.com">
-          fxthienan@gmail.com
-        </a>{" "}
-        or through this form.
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="contacts-page">
+        <h1>Contact Me</h1>
+        <p>
+          Please contact me directly at {" "}
+          <a className="underline" href="mailto:fxthienan@gmail.com">
+            fxthienan@gmail.com
+          </a>{" "}
+          or through this form.
 
-      </p>
-      <form className="contact-form" onSubmit={onSubmit}>
-        <label htmlFor="name">Name*</label>
-        <input type="text" name="name" required autoComplete='off' placeholder='Your Name...'/>
+        </p>
+        <form className="contact-form" onSubmit={onSubmit}>
+          <label htmlFor="name">Name*</label>
+          <input type="text" name="name" required autoComplete='off' placeholder='Your Name...'/>
 
-        <label htmlFor="email">Email*</label>
-        <input type="email" name="email" required placeholder='Your Email Address...'/>
+          <label htmlFor="email">Email*</label>
+          <input type="email" name="email" required placeholder='Your Email Address...'/>
 
-        <label htmlFor="message">Message*</label>
-        <textarea name="message" required rows="5" placeholder='Your Message...'/>
+          <label htmlFor="message">Message*</label>
+          <textarea name="message" required rows="5" placeholder='Your Message...'/>
 
-        <button type="submit">Send</button>
-      </form>
+          <button type="submit">Send</button>
+        </form>
 
-      <ul className="social-links">
-        <li>
-          <a href="https://github.com/thienan11" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-github fa-fw"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com/in/thienan-tran" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin"></i>
-          </a>
-        </li>
-        
-      </ul>
-    </div>
+        <ul className="social-links">
+          <li>
+            <a href="https://github.com/thienan11" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github fa-fw"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/thienan-tran" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin"></i>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </motion.div>
   );
 }
 
