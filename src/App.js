@@ -6,7 +6,7 @@ import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import ReadingsList from "./pages/ReadingList";
 import Contact from "./pages/Contact";
-import BackToTopButton from "./components/BackToTopButton";
+// import BackToTopButton from "./components/BackToTopButton";
 
 function App() {
   return (

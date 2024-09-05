@@ -1,15 +1,24 @@
 import ProjectsData from '../data/ProjectsData';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import ProjectsSkeleton from '../components/ProjectsSkeleton';
 
 const Projects = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
 
   // Function to handle navigation
   const goToProjectDetails = (projectId) => {
     navigate(`/projects/${projectId}`);
   };
+
+  useEffect(() => {
+    // Simulate loading delay
+    setTimeout(() => {
+      setLoading(false);
+    }, 220); // Adjust time as needed
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,36 +40,43 @@ const Projects = () => {
   return (
     <div className="projects-page">
       <h1>My Projects</h1>
-      <div className="projects-grid">
-        {ProjectsData.map((project) => (
-          <motion.div
-            className="project-card"
-            key={project.id}
-            onClick={() => goToProjectDetails(project.projectId)}
-            variants={cardVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.img
-              loading="lazy"
-              src={project.imageUrl}
-              alt={project.title}
-              className="project-image"
-              variants={cardVariants}
-            />
-            <div className="project-info">
-              <h2>{project.title}</h2>
-              {project.techStack && Array.isArray(project.techStack) && (
-                <ul>
-                  {project.techStack.map((tech, index) => (
-                    <li key={index}>{tech}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      {loading ? (
+        <ProjectsSkeleton /> // Display skeleton while loading
+      ) : (
+        <>
+          <div className="projects-grid">
+            {ProjectsData.map((project) => (
+              <motion.div
+                className="project-card border p-4 rounded shadow-lg"
+                key={project.id}
+                onClick={() => goToProjectDetails(project.projectId)}
+                // variants={cardVariants}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <motion.img
+                  loading="lazy"
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="project-image"
+                  variants={cardVariants}
+                />
+                <div className="project-info">
+                  <h2>{project.title}</h2>
+                  {project.techStack && Array.isArray(project.techStack) && (
+                    <ul>
+                      {project.techStack.map((tech, index) => (
+                        <li key={index}>{tech}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };

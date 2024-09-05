@@ -120,7 +120,7 @@
 }
 
 .welcome-page h1 {
-  font-size: 27px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -208,6 +208,13 @@
 
 .job h4 {
   font-size: 14px;
+}
+
+.description {
+  font-size: 14px; /* Adjust font size for readability */
+  color: #555; /* Slightly darker text color for better contrast */
+  line-height: 1.6; /* Increased line height for better readability */
+  margin: 10px 0; /* Adds space above and below the description */
 }
 
 .dates {
@@ -511,4 +518,48 @@
 .social-links a i:hover {
   background-color: #bdbdbd;
   transition: background-color 0.3s ease;
+}
+
+/* Reading List Page */
+
+.reading-list-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.reading-list-container h1 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .reading-list-container {
+    max-width: 100%;
+    padding: 15px;
+    border-radius: 6px;
+  }
+
+  .reading-list-container ul {
+    padding: 0;
+  }
+
+  .reading-list-container li {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .reading-list-container p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .reading-list-container li {
+    font-size: 15px;
+  }
 }

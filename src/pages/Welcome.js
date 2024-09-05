@@ -1,5 +1,6 @@
 import ExperienceData from '../data/ExperienceData';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Welcome = () => {
   const sortedJobs = ExperienceData.sort((a, b) => b.id - a.id);
@@ -26,8 +27,9 @@ const Welcome = () => {
               </p>
               <br />
               <p>
-                I enjoy cooking, reading,
-                playing the <a href="https://www.youtube.com/watch?v=QNG9gSJKbAo" target='_blank' rel="noreferrer">flute</a>,
+                In addition to programming and learning new things, I enjoy cooking, {' '}
+                <Link to="/reading-list" className="text-gray-500 hover:text-black underline transition-colors duration-300">reading</Link>,
+                playing the <a href="https://www.youtube.com/watch?v=QNG9gSJKbAo" target='_blank' rel="noreferrer" className="text-gray-500 hover:text-black underline transition-colors duration-300">flute</a>,
                 and volleyball.
               </p>
             </div>
@@ -42,6 +44,7 @@ const Welcome = () => {
                 <h3>{job.title}</h3>
                 <h4>{job.company}</h4>
                 <p className="dates">{job.dates}</p>
+                <p className="description">{job.description}</p>
               </div>
             ))}
           </div>

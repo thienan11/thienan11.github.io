@@ -20,7 +20,7 @@ function Navbar() {
         </button>
         <li><NavLink to="/" exact onClick={toggleMenu}>Welcome</NavLink></li>
         <li><NavLink to="/projects" onClick={toggleMenu}>Projects</NavLink></li>
-        {/* <li><NavLink to="/reading-list" onClick={toggleMenu}>Reading List</NavLink></li> */}
+        <li><NavLink to="/reading-list" onClick={toggleMenu}>Reading List</NavLink></li>
         <li><NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink></li>
       </ul>
     </nav>
