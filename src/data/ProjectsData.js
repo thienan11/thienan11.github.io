@@ -3,28 +3,28 @@ const projectsData = [
     projectId: "SLOStudySpots",
     title: "SLOStudySpots",
     description: "SLOStudySpots is an interactive web application designed to help students and residents of San Luis Obispo find the best study spots in the area.\n\nThis user-friendly platform provides users with detailed reviews, ratings, and photos of various locations, including cafes, libraries, and public spaces, making it easier to find the perfect place for study or work.",
-    techStack: ["Lit", "Express", "MongoDB", "TypeScript", "Vite"],
+    techStack: ["Lit", "Express.js", "MongoDB", "TypeScript", "Vite", "Google Cloud Storage"],
     imageUrl: "/images/slostudyspots.png",
     websiteUrl: "https://stingray-app-kn7he.ondigitalocean.app/app",
     githubUrl: "https://github.com/thienan11/SLOStudySpots"
   },
   {
-    projectId: "Bloguetown",
-    title: "Bloguetown",
-    description: "Bloguetown is an easy-to-use platform that enables bloggers to publish, manage, and promote their posts effectively!",
-    techStack: ["React", "Express", "MongoDB", "NodeJS"],
-    imageUrl: "/images/bloguetown.png",
-    websiteUrl: "https://bloguetown.vercel.app",
-    githubUrl: "https://github.com/thienan11/bloguetown"
-  },
-  {
     projectId: "Mapping-for-Social-Justice",
     title: "Mapping for Social Justice",
     description: "A comprehensive image/video archiving and analysis platform to collect, analyze, and protect content, focusing on advancing social justice initiatives. \n\n Developed specifically for the \"Mapping for Social Justice\" research project, it aims to provide a robust tool for activists, researchers, and organizations to access and utilize data in their pursuit of equity and reform.",
-    techStack: ["React", "MongoDB", "AWS S3", "Flask", "Python"],
+    techStack: ["React.js", "MongoDB", "AWS S3", "Flask", "OpenCV", "Docker"],
     imageUrl: "/images/mfsj.png",
-    websiteUrl: "",
+    websiteUrl: "https://mfsj.netlify.app",
     githubUrl: "https://github.com/thienan11/MappingForSocialJustice"
+  },
+  {
+    projectId: "Bloguetown",
+    title: "Bloguetown",
+    description: "Bloguetown is an easy-to-use platform that enables bloggers to publish, manage, and promote their posts effectively!",
+    techStack: ["React.js", "Express", "MongoDB", "Node.js"],
+    imageUrl: "/images/bloguetown.png",
+    websiteUrl: "https://bloguetown.vercel.app",
+    githubUrl: "https://github.com/thienan11/bloguetown"
   },
   {
     projectId: "Best-Picture-Predictor",
