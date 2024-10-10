@@ -37,7 +37,7 @@ const Welcome = () => {
         </section>
         <button onClick={() => window.open("https://drive.google.com/file/d/1VaovggDAmNLZGGPfFfIAqnSN5mqFk3CH/view?usp=sharing", '_blank')}>Resume</button>
         <section className="experience-section">
-          <h2><strong>Experience</strong></h2>
+          <h2><strong>Where I've Been</strong></h2>
           <div className="experience-list">
             {sortedJobs.map((job, index) => (
               <div className="job" key={index}>
