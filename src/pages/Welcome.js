@@ -30,7 +30,7 @@ const Welcome = () => {
                 In addition to programming and learning new things, I enjoy cooking, {' '}
                 <Link to="/reading-list" className="text-gray-500 hover:text-black underline transition-colors duration-300">reading</Link>,
                 playing the <a href="https://www.youtube.com/watch?v=QNG9gSJKbAo" target='_blank' rel="noreferrer" className="text-gray-500 hover:text-black underline transition-colors duration-300">flute</a>,
-                and volleyball.
+                and being outdoor!
               </p>
             </div>
           </div>
