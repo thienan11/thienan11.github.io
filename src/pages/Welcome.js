@@ -22,8 +22,8 @@ const Welcome = () => {
               </p>
               <br/>
               <p>
-                I am actively seeking opportunities that will allow me to further enhance my skills as a software developer.
-                My particular interests lie in full-stack/backend development and machine learning.
+                I'm passionate about full-stack/backend development, cloud computing, and machine learning.
+                I'm driven to develop technologies that have a meaningful impact on society.
               </p>
               <br />
               <p>

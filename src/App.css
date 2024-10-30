@@ -2,6 +2,7 @@
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
+  /* margin: 8px auto; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,9 +10,12 @@
   padding: 10px 20px;
   position: sticky;
   top: 0;
+  /* top: 8px; */
   z-index: 1000;
   /* background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px); */
+  /* border-radius: 50px;
+  border: 1px solid #ddd; */
 }
 
 .navbar .logo {
@@ -70,6 +74,7 @@
 @media (max-width: 600px) {
   .navbar {
     border-bottom: 1px solid #ddd;
+    /* margin: 8px 5px; */
   }
 
   .navbar .menu-icon {
@@ -180,11 +185,23 @@
 
 }
 
+.experience-section {
+  margin-top: 30px;
+  border-top: 1px solid #ddd; /* A subtle divider line */
+  padding-top: 20px; /* Space above the section */
+}
+
 .experience-section h2 {
   /* text-align: center; */
-  margin-top: 30px;
+  margin-top: 10px;
   color: #333;
   font-size: 20px;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column; /* Stack the job items vertically */
+  gap: 10px; /* Space between items */
 }
 
 .experience-section .experience-list {
@@ -192,35 +209,46 @@
 }
 
 .job {
-  background: #f8f8f8;
+  /* background: #f8f8f8;
   padding: 20px;
   margin-bottom: 10px;
-  border-radius: 8px;
+  border-radius: 8px; */
   /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
   /* text-align: center; */
+  background: #f9f9f9; /* Slightly lighter background */
+  padding: 20px;
+  margin: 10px 0; /* Space between job items */
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s; /* Smooth hover effect */
 }
 
 .job h3 {
   color: #333;
   font-weight: bold;
   font-size: 17px;
+  margin-bottom: 5px; /* Space below the title */
 }
 
 .job h4 {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .description {
   font-size: 14px; /* Adjust font size for readability */
-  color: #555; /* Slightly darker text color for better contrast */
+  color: #555;
   line-height: 1.6; /* Increased line height for better readability */
   margin: 10px 0; /* Adds space above and below the description */
 }
 
 .dates {
-  font-size: 12px;
+  /* font-size: 12px;
   color: #888;
+  font-style: italic; */
+  font-size: 14px; /* Increased size for dates */
+  color: #95a5a6; /* Softer color for dates */
   font-style: italic;
+  margin-bottom: 5px; /* Space below the date */
 }
 
 @media (max-width: 768px) {
