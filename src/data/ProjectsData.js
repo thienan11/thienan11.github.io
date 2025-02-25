@@ -5,7 +5,7 @@ const projectsData = [
     description: "SLOStudySpots is an interactive web application designed to help students and residents of San Luis Obispo find the best study spots in the area.\n\nThis user-friendly platform provides users with detailed reviews, ratings, and photos of various locations, including cafes, libraries, and public spaces, making it easier to find the perfect place for study or work.",
     techStack: ["Lit", "Express.js", "MongoDB", "TypeScript", "Vite", "Google Cloud Storage"],
     imageUrl: "/images/slostudyspots.png",
-    websiteUrl: "https://stingray-app-kn7he.ondigitalocean.app/app",
+    websiteUrl: "https://slostudyspots.onrender.com/app",
     githubUrl: "https://github.com/thienan11/SLOStudySpots"
   },
   {
@@ -34,6 +34,15 @@ const projectsData = [
     imageUrl: "/images/oscarsbp.jpeg",
     websiteUrl: "",
     githubUrl: "https://github.com/thienan11/BestPicturePredictor"
+  },
+  {
+    projectId: "UML-Mentor",
+    title: "UML Mentor",
+    description: "An interactive tutoring app that translates between UML and Java, utilizing MVC, Singleton, and Observer patterns, with ChatGPT 3.5 Turbo API for problem generation and a feedback system built on graph structures.",
+    techStack: ["Java", "MySQL", "Java Swing", "JDBC", "JUnit", "Maven"],
+    imageUrl: "/images/umlmentor.png",
+    websiteUrl: "",
+    githubUrl: "https://github.com/thienan11/UMLMentor"
   },
   {
     projectId: "Binary-File-Sorter",

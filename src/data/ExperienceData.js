@@ -23,6 +23,16 @@ const experienceData = [
   {
     id: 4,
     title: "Software Developer",
+    company: "Develop for Good",
+    description: ["Developed a data pipeline for the ",
+      <a href="https://agcchicago.org/" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-black underline transition-colors duration-300">Academy for Global Citizenship</a>,
+      " to track student progress and improve educational outcomes."
+    ],
+    dates: "October 2024 - February 2025"
+  },
+  {
+    id: 5,
+    title: "Software Developer",
     company: "VOICE",
     description: [
       "Continuing the 'Mapping for Social Justice' project at ",
@@ -32,7 +42,7 @@ const experienceData = [
     dates: "August 2024 - Present"
   },
   {
-    id: 5,
+    id: 6,
     title: "Full-Stack Developer",
     company: "EIEN Studio",
     description: ["Working on ",
@@ -40,13 +50,6 @@ const experienceData = [
       " the official website of Ongawa, a mobile rhythm game."
     ],
     dates: "October 2024 - Present"
-  },
-  {
-    id: 6,
-    title: "Software Developer",
-    company: "Develop for Good",
-    description: "",
-    dates: "October 2024 - February 2025"
   },
 ];
 
